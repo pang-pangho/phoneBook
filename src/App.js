@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import ContactForm from "./component/ContactForm";
+import ContactList from "./component/ContactList";
+import SearchBox from "./component/SearchBox";
+import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="contact-container">
+        <div className="title">
+          <div>My Contact</div>
+          <img
+            className="call-img"
+            width={100}
+            height={95}
+            src="https://cdn-icons-png.flaticon.com/512/15/15866.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <SearchBox />
+        </div>
+        <div>
+          <ContactList />
+          <ContactForm />
+        </div>
+      </div>
     </div>
   );
 }
